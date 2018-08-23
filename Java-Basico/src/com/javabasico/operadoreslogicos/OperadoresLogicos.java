@@ -48,6 +48,6 @@ public class OperadoresLogicos {
          *
          * Quando comparamos objetos diferentes, utilizamos o método equals
          * (nome 1 é uma variável e nome 3 é um objeto da classe String)
-         */
+         */   
     }
 }
