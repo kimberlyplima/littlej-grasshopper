@@ -15,14 +15,12 @@ public class Main {
         Vertex v = new Vertex();
         Vertex w = new Vertex();
         
-        v.name(2);
-        w.name(7);
+        v.setVertex(2);
+        w.setVertex(7);
         
         Arc arco = new Arc();
         
-        arco.setV(v);
-        arco.setW(w);
-        
-        System.out.println(arco);
+        System.out.println(arco.getV());
+        System.out.println(arco.getW());
     }
 }

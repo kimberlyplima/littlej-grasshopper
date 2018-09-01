@@ -18,8 +18,8 @@ public class Arc{
     /**
      * @return the v
      */
-    public Vertex getV() {
-        return v;
+    public String getV() {
+        return v.getVertex();
     }
 
     /**
@@ -32,8 +32,8 @@ public class Arc{
     /**
      * @return the w
      */
-    public Vertex getW() {
-        return w;
+    public String getW() {
+        return w.getVertex();
     }
 
     /**
@@ -53,9 +53,5 @@ public class Arc{
         arco.setW(w);
         
         return arco;
-    }
-    
-    public void showArcs(Arc arco){
-        System.out.println(arco);
     }
 }

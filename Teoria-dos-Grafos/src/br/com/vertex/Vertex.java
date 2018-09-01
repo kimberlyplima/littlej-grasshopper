@@ -11,8 +11,23 @@ package br.com.vertex;
  */
 public class Vertex {
     
-    public String name(int value){
-        String name = Integer.toString(value);
-        return name;
+    private String value;
+
+    /**
+     * @return the name
+     */
+    public String getVertex() {
+        return value;
     }
+
+    /**
+     * @param value the value to set
+     */
+    public void setVertex(int value) {
+        this.value = Integer.toString(value);
+    }
+    
+
+    
+    
 }
