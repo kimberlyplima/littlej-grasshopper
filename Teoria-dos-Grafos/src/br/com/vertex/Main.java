@@ -12,15 +12,7 @@ package br.com.vertex;
 public class Main {
     
     public static void main(String[] args) {
-        Vertex v = new Vertex();
-        Vertex w = new Vertex();
-        
-        v.setVertex(2);
-        w.setVertex(7);
-        
-        Arc arco = new Arc();
-        
-        System.out.println(arco.getV());
-        System.out.println(arco.getW());
+
+
     }
 }
