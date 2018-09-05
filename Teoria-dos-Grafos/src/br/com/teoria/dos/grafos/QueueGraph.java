@@ -20,15 +20,15 @@ public class QueueGraph {
         queue = new LinkedList();
     }
     
-    public void Enqueue(Vertex vertex){
+    public void enqueue(Vertex vertex){
         queue.add(vertex);
     }
     
-    public Vertex Dequeue(){
+    public Vertex dequeue(){
         return queue.remove();
     }
     
-    public int Quantity(){
+    public int queueSize(){
         return queue.size();
     }
 }

@@ -5,8 +5,6 @@
  */
 package br.com.teoria.dos.grafos;
 
-import java.util.HashMap;
-import java.util.List;
 
 /**
  *
@@ -15,11 +13,9 @@ import java.util.List;
 public class Vertex {
     
     private String name;
-    private int id;
 
-    public Vertex(String name, int id){
+    public Vertex(String name){
         this.name = name;
-        this.id = id;
     }
 
     /**
@@ -34,20 +30,6 @@ public class Vertex {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
     }
    
 }
