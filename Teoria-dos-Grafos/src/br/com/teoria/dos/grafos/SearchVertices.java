@@ -7,23 +7,18 @@ package br.com.teoria.dos.grafos;
 
 import java.util.*;
 
-
 /**
  *
  * @author kimberlyplima
  */
-public class Vertex {
+public class SearchVertices {
+    Vertex inicialVertex;
+    LinkedList queue;
+    int cont = 0;
     
-    private String name;
-
-    public Vertex(String name){
-        this.name = name;
+    
+    
+    public SearchVertices(){
+        
     }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return this.name;
-    }  
 }

@@ -14,6 +14,7 @@ import java.util.*;
 public class Main {
     
     public static void main(String[] args) {
+        
         Vertex um = new Vertex("0");
         Vertex dois = new Vertex("9");        
         Vertex tres = new Vertex("3");
@@ -22,7 +23,10 @@ public class Main {
         Vertex seis = new Vertex("2");
         Vertex sete = new Vertex("8");
         
-        AdjacencyList lista = new AdjacencyList(um);
+        Arc arco = new Arc(dois,quatro);
+        arco.showArc();
+        
+        Graph lista = new Graph(um);
         lista.addNewVertex(um, tres);
         lista.addNewVertex(um, dois);
         lista.addNewVertex(um, quatro);
@@ -30,7 +34,7 @@ public class Main {
         lista.addNewVertex(sete, um);
         lista.addNewVertex(sete, seis);
         
-        //lista.showKeys();
+        lista.showMainVertices();
         
         lista.showAdjList(um);
         System.out.println();

@@ -5,15 +5,13 @@
  */
 package br.com.teoria.dos.grafos;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  *
  * @author kimberlyplima
  */
-public class AdjacencyList {
+public class Graph {
     
     private HashMap<Vertex, LinkedList> graph;
     private LinkedList<Vertex> adjList;
@@ -22,7 +20,7 @@ public class AdjacencyList {
     * Creates the adjacency list and
     * @param mainVertex inserts the main vertex in the first key
     **/
-    public AdjacencyList(Vertex mainVertex){
+    public Graph(Vertex mainVertex){
         graph = new HashMap();
         adjList = new LinkedList();
         
@@ -47,7 +45,7 @@ public class AdjacencyList {
 
     }
     
-    public void showKeys(){
+    public void showMainVertices(){
         Iterator<Vertex> i = graph.keySet().iterator();
         
         while(i.hasNext()){
