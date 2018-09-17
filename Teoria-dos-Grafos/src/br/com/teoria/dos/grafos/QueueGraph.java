@@ -5,8 +5,7 @@
  */
 package br.com.teoria.dos.grafos;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  *
@@ -30,5 +29,21 @@ public class QueueGraph {
     
     public int queueSize(){
         return queue.size();
+    }
+    
+    public void showQueue(){
+        Iterator<Vertex> i = queue.iterator();
+        
+        while(i.hasNext()){
+            System.out.println(i.next().getValue());
+        }
+    }
+    
+    public Boolean isEmpty(){
+        return queue.isEmpty();
+    }
+    
+    public Vertex getVertex(){
+        return queue.peek();
     }
 }

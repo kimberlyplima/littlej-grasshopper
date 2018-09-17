@@ -14,16 +14,16 @@ import java.util.*;
  */
 public class Vertex {
     
-    private String name;
+    private Integer vertex;
 
-    public Vertex(String name){
-        this.name = name;
+    public Vertex(Integer vertex){
+        this.vertex = vertex;
     }
 
     /**
      * @return the name
      */
-    public String getName() {
-        return this.name;
+    public Integer getValue() {
+        return this.vertex;
     }  
 }

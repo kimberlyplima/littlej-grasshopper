@@ -31,7 +31,7 @@ public class Arc {
     }
     
     public void showArc(){
-        System.out.print(arc.get(0).getName() + " ");
-        System.out.println(arc.get(1).getName());
+        System.out.print(arc.get(0).getValue() + " ");
+        System.out.println(arc.get(1).getValue());
     }
 }

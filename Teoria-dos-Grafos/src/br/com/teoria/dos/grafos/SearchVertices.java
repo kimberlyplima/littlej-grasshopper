@@ -11,14 +11,29 @@ import java.util.*;
  *
  * @author kimberlyplima
  */
-public class SearchVertices {
-    Vertex inicialVertex;
-    LinkedList queue;
+public class SearchVertices{ 
+    int numVertices;
+    QueueGraph queue;
     int cont = 0;
     
-    
-    
-    public SearchVertices(){
+    public SearchVertices(Graph graph, Vertex initialVertex){
+        numVertices = graph.sizeGraph();
+        Vertex visited[] = new Vertex[numVertices];
+        queue = new QueueGraph();
+        Vertex v;
+        
+        
+        //visited[v] = cont++;
+        queue.enqueue(initialVertex);
+        
+        while(!queue.isEmpty()){
+            v = queue.getVertex();
+            queue.dequeue();
+            
+            
+        }
+        
+        
         
     }
 }

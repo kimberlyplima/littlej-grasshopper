@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author kimberlyplima
  */
-public class Graph {
+public class Graph{
     
     private HashMap<Vertex, LinkedList> graph;
     private LinkedList<Vertex> adjList;
@@ -20,11 +20,11 @@ public class Graph {
     * Creates the adjacency list and
     * @param mainVertex inserts the main vertex in the first key
     **/
-    public Graph(Vertex mainVertex){
+    public Graph(Vertex firstVertex){
         graph = new HashMap();
         adjList = new LinkedList();
         
-        graph.put(mainVertex, adjList);
+        graph.put(firstVertex, adjList);
     }
     
     public void addNewVertex(Vertex mainVertex, Vertex adjVertex){
@@ -36,20 +36,36 @@ public class Graph {
         graph.get(mainVertex).add(adjVertex);
     }
     
-    public void showAdjList(Vertex mainVertex){        
-        Iterator<Vertex> i = graph.get(mainVertex).iterator();
+    public int sizeGraph(){
+        int sizeGraph = graph.size();
+        Iterator<LinkedList> i = graph.values().iterator();
         
         while(i.hasNext()){
-            System.out.print(i.next().getName() + " ");
+            sizeGraph += i.next().size();
         }
-
+        
+        return sizeGraph;
     }
     
-    public void showMainVertices(){
+    public LinkedList<Vertex> getAdjList(Vertex position){
+        LinkedList adjList = new LinkedList();
+        adjList = graph.get(position);
+        
+        return adjList;
+    }
+    
+    public int getIndex(Vertex vertex){
+        int index = 0;
+        
         Iterator<Vertex> i = graph.keySet().iterator();
         
         while(i.hasNext()){
-            System.out.println(i.next().getName() + " ");
-        }
+            index++;
+            if(!i.next().getValue().equals(vertex)){
+                index++;
+            } else break;
+        } 
+        
+        return index;
     }
 }
