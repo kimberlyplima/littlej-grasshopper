@@ -19,22 +19,22 @@ public class Main {
         
         graph.buildGraph(0, 1);
         graph.buildGraph(0, 2);
-        graph.buildGraph(1, 0);
+        //graph.buildGraph(1, 0);
         graph.buildGraph(1, 3);
-        graph.buildGraph(2, 0);
+        //graph.buildGraph(2, 0);
         graph.buildGraph(2, 3);
-        graph.buildGraph(3, 1);
-        graph.buildGraph(3, 2);
+        //graph.buildGraph(3, 1);
+        //graph.buildGraph(3, 2);
         graph.buildGraph(3, 4);
-        graph.buildGraph(4, 3);
+        //graph.buildGraph(4, 3);
         graph.buildGraph(4, 5);
         graph.buildGraph(5, null);
         
         graph.showGraph();
         
-        BfsVisitationVector search = new BfsVisitationVector(graph, 1);
+        //BfsVisitationVector search = new BfsVisitationVector(graph, 1);
         
-        //System.out.println("\n" + graph.sizeGraph());
+        BfsDistanceVector search = new BfsDistanceVector(graph, 0);
     }
     
 }
