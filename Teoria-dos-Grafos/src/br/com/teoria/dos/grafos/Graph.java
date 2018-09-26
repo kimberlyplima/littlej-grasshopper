@@ -10,62 +10,45 @@ import java.util.*;
 /**
  *
  * @author kimberlyplima
+ * 
+ * This class implements the graph structure.
+ * It's possible to creat an arc and add this arc in the graph.
+ * It is, also, possible to get the size of the arc and the adjacencies 
+ * of a main vertex (key of the map).
  */
 public class Graph{
     
     private HashMap<Vertex, LinkedList> graph;
-    private LinkedList<Vertex> adjList;
+    private LinkedList<Vertex> adj;
     
-    /** 
-    * Creates the adjacency list and
-    * @param mainVertex inserts the main vertex in the first key
-    **/
-    public Graph(Vertex firstVertex){
+    public Graph(){
         graph = new HashMap();
-        adjList = new LinkedList();
-        
-        graph.put(firstVertex, adjList);
     }
     
-    public void addNewVertex(Vertex mainVertex, Vertex adjVertex){
-        if(!graph.containsKey(mainVertex)){
-            adjList = new LinkedList();
-            graph.put(mainVertex, adjList);            
+    public void addNewArc(String inicialVertex, String finalVertex){
+        Vertex v = new Vertex(inicialVertex);
+        Vertex w = new Vertex(finalVertex);
+        
+        if(!graph.containsKey(v)){
+            adj = new LinkedList();
+            
+            adj.add(w);
+            graph.put(v, adj);
+        } else {
+            adj.add(w);
+            graph.get(v).add(adj);
         }
-
-        graph.get(mainVertex).add(adjVertex);
     }
     
     public int sizeGraph(){
-        int sizeGraph = graph.size();
-        Iterator<LinkedList> i = graph.values().iterator();
-        
-        while(i.hasNext()){
-            sizeGraph += i.next().size();
-        }
-        
-        return sizeGraph;
+        return graph.size();
     }
     
-    public LinkedList<Vertex> getAdjList(Vertex position){
-        LinkedList adjList = new LinkedList();
-        adjList = graph.get(position);
-        
-        return adjList;
+    public LinkedList<Vertex> getAdj(Vertex key){        
+        return graph.get(key);
     }
     
-    public int getIndex(Vertex vertex){
-        int index = 0;
-        
-        Iterator<Vertex> i = graph.keySet().iterator();
-        
-        while(i.hasNext()){
-            index++;
-            if(!i.next().getValue().equals(vertex)){
-                index++;
-            } else break;
-        } 
-        
-        return index;
+    public HashMap<Vertex, LinkedList> getGraph(){
+        return graph;
     }
 }

@@ -14,16 +14,20 @@ import java.util.*;
  */
 public class Vertex {
     
-    private Integer vertex;
+    private String vertex;
 
-    public Vertex(Integer vertex){
+    public Vertex(String vertex){
         this.vertex = vertex;
     }
 
     /**
      * @return the name
      */
-    public Integer getValue() {
+    public String getValue() {
         return this.vertex;
-    }  
+    }
+    
+    public Boolean equalsTo(String value){
+        return this.vertex.equals(value);
+    }
 }

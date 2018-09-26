@@ -14,39 +14,22 @@ import java.util.*;
 public class Main {
     
     public static void main(String[] args) {
+        Graph g = new Graph();
+        Vertex inicialVertex = new Vertex("0");
         
-        Vertex um = new Vertex(1);
-        Vertex dois = new Vertex(2);        
-        Vertex tres = new Vertex(3);
-        Vertex quatro = new Vertex(4);
-        Vertex cinco = new Vertex(5);
-        Vertex seis = new Vertex(6);
-        Vertex sete = new Vertex(7);
+        g.addNewArc("0", "1");
+        g.addNewArc("0", "2");
+        g.addNewArc("1", "0");
+        g.addNewArc("1", "2");
+        g.addNewArc("2", "0");
+        g.addNewArc("2", "1");
         
-        Graph lista = new Graph(um);
-        lista.addNewVertex(um, dois);        
-        lista.addNewVertex(um, tres);
-        lista.addNewVertex(um, quatro);
+        SearchVertices sv = new SearchVertices(g, inicialVertex);
         
-        lista.addNewVertex(dois, seis);        
-        lista.addNewVertex(dois, sete);
+        int size = sv.visited.length;
         
-        /*
-        QueueGraph queue = new QueueGraph();
-        queue.enqueue(um);
-        queue.enqueue(dois);
-        queue.enqueue(tres);
-        queue.enqueue(quatro);
-
-        System.out.println("O tamanho da fila é: " + queue.queueSize());
-        
-        queue.showQueue();
-        queue.dequeue();
-        queue.showQueue();
-        */
-        
-        //System.out.println("\n\nO grafo tem " + lista.sizeGraph() + " nós");
-        
-        System.out.println(lista.getIndex(sete));
+        for(int i = 0; i < size; i++){
+            System.out.print(sv.visited[i] + " ");
+        }
     }
 }

@@ -31,14 +31,6 @@ public class QueueGraph {
         return queue.size();
     }
     
-    public void showQueue(){
-        Iterator<Vertex> i = queue.iterator();
-        
-        while(i.hasNext()){
-            System.out.println(i.next().getValue());
-        }
-    }
-    
     public Boolean isEmpty(){
         return queue.isEmpty();
     }
