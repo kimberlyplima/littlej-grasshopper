@@ -5,31 +5,36 @@
  */
 package br.com.teoria.dos.grafos;
 
-import java.util.*;
-
 /**
  *
  * @author kimberlyplima
  */
 public class Main {
-    
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Graph g = new Graph();
-        Vertex inicialVertex = new Vertex("0");
+        Graph graph = new Graph();
         
-        g.addNewArc("0", "1");
-        g.addNewArc("0", "2");
-        g.addNewArc("1", "0");
-        g.addNewArc("1", "2");
-        g.addNewArc("2", "0");
-        g.addNewArc("2", "1");
+        graph.buildGraph(0, 1);
+        graph.buildGraph(0, 2);
+        graph.buildGraph(1, 0);
+        graph.buildGraph(1, 3);
+        graph.buildGraph(2, 0);
+        graph.buildGraph(2, 3);
+        graph.buildGraph(3, 1);
+        graph.buildGraph(3, 2);
+        graph.buildGraph(3, 4);
+        graph.buildGraph(4, 3);
+        graph.buildGraph(4, 5);
+        graph.buildGraph(5, null);
         
-        SearchVertices sv = new SearchVertices(g, inicialVertex);
+        graph.showGraph();
         
-        int size = sv.visited.length;
+        BfsVisitationVector search = new BfsVisitationVector(graph, 1);
         
-        for(int i = 0; i < size; i++){
-            System.out.print(sv.visited[i] + " ");
-        }
+        //System.out.println("\n" + graph.sizeGraph());
     }
+    
 }

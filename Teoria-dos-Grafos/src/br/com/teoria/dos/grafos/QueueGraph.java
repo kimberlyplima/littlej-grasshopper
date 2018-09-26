@@ -13,17 +13,17 @@ import java.util.*;
  */
 public class QueueGraph {
     
-    private Queue<Vertex> queue;
+    private Queue<Integer> queue;
     
     public QueueGraph(){
         queue = new LinkedList();
     }
     
-    public void enqueue(Vertex vertex){
+    public void enqueue(Integer vertex){
         queue.add(vertex);
     }
     
-    public Vertex dequeue(){
+    public Integer dequeue(){
         return queue.remove();
     }
     
@@ -35,7 +35,7 @@ public class QueueGraph {
         return queue.isEmpty();
     }
     
-    public Vertex getVertex(){
+    public Integer getInteger(){
         return queue.peek();
     }
 }
