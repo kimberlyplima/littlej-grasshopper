@@ -14,7 +14,7 @@ import java.awt.Toolkit;
  */
 public class TamanhoTela {
     
-    public static void main (String[] args){
+    public TamanhoTela(){
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();

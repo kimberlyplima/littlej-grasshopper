@@ -1,18 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ * Operações matemáticas
+ */        
 package com.javabasico.operacoesmatematicas;
 
 /**
  *
  * @author kimberlyplima
  */
-public class OperacoesMatematicas {
-    
-    public static void main(String[] args) {
-        
+public class Operacoes {
+    public Operacoes(){
         // Métodos da classe Math para arredondar valores:
         float v1 = 9.2f;
         
@@ -37,5 +33,4 @@ public class OperacoesMatematicas {
         
         System.out.println(Math.round(v3)); // arredonda valor gerado na linha acima
     }
-    
 }

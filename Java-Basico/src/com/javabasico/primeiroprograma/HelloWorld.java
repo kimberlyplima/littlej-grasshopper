@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.javabasico.meuprimeiroprograma;
+package com.javabasico.primeiroprograma;
 
 /**
  *
  * @author kimberlyplima
  */
 public class HelloWorld {
-
-    public static void main (String[] args){
-
-    System.out.println("Olá, Mundo!");
-    }    
+    public HelloWorld(){
+        System.out.println("Olá, Mundo!");
+    }
 }

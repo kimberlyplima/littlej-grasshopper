@@ -1,18 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.javabasico.operadoreslogicos;
+* Operadores lógicos
+*/   
+package com.javabasico.operadores;
 
 /**
  *
  * @author kimberlyplima
  */
-public class OperadoresLogicos {
-    
-    public static void main(String[] args) {
-        
+public class Operadores {
+    public Operadores(){         
         int n1 = 5;
         int n2 = 3;
         
@@ -48,6 +44,6 @@ public class OperadoresLogicos {
          *
          * Quando comparamos objetos diferentes, utilizamos o método equals
          * (nome 1 é uma variável e nome 3 é um objeto da classe String)
-         */   
+         */
     }
 }

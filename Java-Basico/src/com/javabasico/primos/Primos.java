@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Esta classe verifica se um número passado por parâmetro é primo.
  */
 package com.javabasico.primos;
 
@@ -24,11 +22,5 @@ public class Primos {
             } else System.out.println("O número " + i + " não é primo.");
             
         }
-    }
-    
-    public static void main(String[] args) {
-        Primos teste = new Primos();
-        
-        teste.primo(21);
     }
 }

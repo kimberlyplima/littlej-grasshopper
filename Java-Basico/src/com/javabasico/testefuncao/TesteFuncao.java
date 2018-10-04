@@ -21,12 +21,22 @@ public class TesteFuncao {
         return s;
     }
     
-    public static void main(String[] args) {
-        
+    // static: não é necessário instanciar a classe para utilizar os métodos dela
+    public static String contador (int i, int f){
+        String s = "";
+
+        for(int c = i; c <= f; c++){
+            s += c + " ";
+        }
+
+        return s;
+    }
+    
+    public TesteFuncao(){
         soma(5,2);
         int resultado = soma2(3,9);
         
         System.out.println("O resultado da segunda soma é " + resultado);
     }
-    
+        
 }

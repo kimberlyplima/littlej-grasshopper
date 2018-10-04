@@ -11,13 +11,7 @@ import java.util.Scanner;
  * @author kimberlyplima
  */
 public class TiposPrimitivos {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
+    public TiposPrimitivos(){
         Scanner teclado = new Scanner(System.in);
         
         System.out.println("Digite o nome do aluno:");
@@ -28,5 +22,4 @@ public class TiposPrimitivos {
         
         System.out.printf("A nota de %s é %.2f \n", nome, nota);        
     }
-    
 }
