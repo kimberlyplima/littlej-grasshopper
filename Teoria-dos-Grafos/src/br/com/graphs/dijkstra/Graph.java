@@ -30,6 +30,10 @@ public class Graph {
         if(!vertices.contains(source)){
             vertices.add(source);
         }
+        
+        if(!vertices.contains(destination)){
+            vertices.add(destination);
+        }
     }
     
     
