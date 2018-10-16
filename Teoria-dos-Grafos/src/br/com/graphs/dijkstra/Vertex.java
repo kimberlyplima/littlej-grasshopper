@@ -6,11 +6,11 @@ package br.com.graphs.dijkstra;
  */
 public class Vertex {
     private int id;
-    private int distance;
+    private int cost;
     
     public Vertex(int id){
         this.id = id;
-        this.distance = -1;
+        this.cost = -1;
     }
 
     /**
@@ -28,16 +28,16 @@ public class Vertex {
     }
 
     /**
-     * @return the distance
+     * @return the cost
      */
-    public int getDistance() {
-        return distance;
+    public int getCost() {
+        return cost;
     }
 
     /**
-     * @param distance the distance to set
+     * @param cost the cost to set
      */
-    public void setDistance(int distance) {
-        this.distance = distance;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 }

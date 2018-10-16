@@ -12,53 +12,53 @@ package br.com.graphs.dijkstra;
 public class Edge {
     private Vertex source;
     private Vertex destination;
-    private int weight;
+    private int cost;
     
-    public Edge(Vertex source, Vertex destination, int weight){
-        this.source = source;
-        this.destination = destination;
-        this.weight = weight;
+    public Edge(int source, int destination, int cost){
+        this.source = new Vertex(source);
+        this.destination = new Vertex(destination);
+        this.cost = cost;
     }
 
     /**
      * @return the source
      */
-    public Vertex getSourceNode() {
+    public Vertex getSource() {
         return source;
     }
 
     /**
      * @param source the source to set
      */
-    public void setSourceNode(Vertex source) {
+    public void setSource(Vertex source) {
         this.source = source;
     }
 
     /**
      * @return the destination
      */
-    public Vertex getDestinationNode() {
+    public Vertex getDestination() {
         return destination;
     }
 
     /**
      * @param destination the destination to set
      */
-    public void setDestinationNode(Vertex destination) {
+    public void setDestination(Vertex destination) {
         this.destination = destination;
     }
 
     /**
-     * @return the weight
+     * @return the cost
      */
-    public int getWeight() {
-        return weight;
+    public int getcost() {
+        return cost;
     }
 
     /**
-     * @param weight the weight to set
+     * @param cost the cost to set
      */
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setcost(int cost) {
+        this.cost = cost;
     }
 }
