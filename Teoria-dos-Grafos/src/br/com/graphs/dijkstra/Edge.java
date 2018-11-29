@@ -5,60 +5,40 @@
  */
 package br.com.graphs.dijkstra;
 
-/**
- *
- * @author kimberlyplima
- */
+import java.util.*;
+
 public class Edge {
-    private Vertex source;
-    private Vertex destination;
-    private int cost;
-    
-    public Edge(int source, int destination, int cost){
-        this.source = new Vertex(source);
-        this.destination = new Vertex(destination);
-        this.cost = cost;
+    private double weight;
+    private Vertex startVertex;
+    private Vertex targetVertex;
+
+    public Edge(double weight, Vertex startVertex, Vertex targetVertex) {
+        this.weight = weight;
+        this.startVertex = startVertex;
+        this.targetVertex = targetVertex;
     }
 
-    /**
-     * @return the source
-     */
-    public Vertex getSource() {
-        return source;
+    public double getWeight() {
+        return weight;
     }
 
-    /**
-     * @param source the source to set
-     */
-    public void setSource(Vertex source) {
-        this.source = source;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    /**
-     * @return the destination
-     */
-    public Vertex getDestination() {
-        return destination;
+    public Vertex getStartVertex() {
+        return startVertex;
     }
 
-    /**
-     * @param destination the destination to set
-     */
-    public void setDestination(Vertex destination) {
-        this.destination = destination;
+    public void setStartVertex(Vertex startVertex) {
+        this.startVertex = startVertex;
     }
 
-    /**
-     * @return the cost
-     */
-    public int getcost() {
-        return cost;
+    public Vertex getTargetVertex() {
+        return targetVertex;
     }
 
-    /**
-     * @param cost the cost to set
-     */
-    public void setcost(int cost) {
-        this.cost = cost;
+    public void setTargetVertex(Vertex targetVertex) {
+        this.targetVertex = targetVertex;
     }
 }
